@@ -212,11 +212,21 @@ public class SlideShow {
     }
 
     private void goEnd() {
-
+        if (images.size() > 0) {
+            currentIndex = images.size() - 1;
+        } else {
+            return;
+        }
+        display();
     }
 
     private void goStart() {
-
+        if (images.size() > 0) {
+            currentIndex = 0;
+        } else {
+            return;
+        }
+        display();
     }
 
     private void goRight() {
